@@ -5,7 +5,7 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1">
-   <link rel="icon" href="assets/logo.webp">
+   <link rel="icon" href="assets/icon/favicon.webp">
    <title>Dmitry Didenko</title>
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,7 +17,39 @@
 </head>
 
 <body>
-
+<header>
+   <header>
+      <div class="header__block">
+         <a class="header__block-logo" href="index.html"><img src="assets/icon/logo.webp" alt="logo"></a>
+         <button type="button" class="burger header__burger"></button>
+         <nav class="navigation__header">
+            <button type="button" class="close header__close"></button>
+            <ul class="header__block-lists navigation__menu">
+               <li class="header__block-link"><a class="header__block-list" href="index.html">Главная</a></li>
+               <li class="header__block-taplink"><a class="header__block-list" href="services.html">Услуги</a>
+                  <ul class="header__block-underlists">
+                     <li class="header__block-underlist"><a href="context.html">Контекстная реклама</a></li>
+                     <li class="header__block-underlist"><a href="seo.html">SEO-продвижение</a></li>
+                     <li class="header__block-underlist"><a href="development.html">Создание сайтов</a></li>
+                     <li class="header__block-underlist"><a href="target.html">Таргетированная реклама</a></li>
+                     <li class="header__block-underlist"><a href="complex.html">Комплексный маркетинг</a></li>
+                     <li class="header__block-underlist"><a href="brand.html">Фирменный стиль</a></li>
+               <li class="header__block-underlist"><a href="marketplace.html">Реклама на маркетплейсах</a></li>
+               <li class="header__block-underlist"><a href="calling.html">Автоматизация продаж</a></li>
+               <li class="header__block-underlist"><a href="email.html">Email маркетинг</a></li>
+            </ul>
+            </li>
+            <li><a class="header__block-list" href="cases.html">Кейсы</a></li>
+            <li><a class="header__block-list" href="about.html">Обо мне</a></li>
+            <li><a class="header__block-list" href="blog.html">Статьи</a></li>
+            <li><a class="header__block-list" href="faq.html">FAQ</a></li>
+            <li><a class="header__block-list" href="contacts.html">Контакты</a></li>
+            </ul>
+         </nav>
+      </div>
+   </header>
+</header>
+<script src="js/burger.js"></script>
 </body>
 
 </html>
