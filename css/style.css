@@ -5,13 +5,10 @@
   padding: 0;
 }
 
-button {
-  border-radius: 30px;
-}
-
 body {
-  background-color: #FFFFFF;
+  background-color: #242423;
   width: 100vw;
-  color: #2F3338;
-  font-family: Montserrat;
+  color: #D8D3CF;
+  font-family: Roboto;
+  overflow-x: hidden;
 }/*# sourceMappingURL=style.css.map */
