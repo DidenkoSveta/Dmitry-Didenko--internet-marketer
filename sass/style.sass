@@ -2,13 +2,44 @@ $white: #FBFEFB
 $mdgrey: #333533
 $black: #242423
 $yellow: #F5CB5C
-$orange: #F36F28
+$orange: #F37935
 $bege: #D8D3CF
+
+@font-face
+	font-family: BauhausItalic
+	src: url(../assets/fonts/BauhausItalic.ttf)
 
 *
 	box-sizing: border-box
 	margin: 0
 	padding: 0
+h3
+	color: $bege
+	font-family: 'Roboto'
+	font-style: normal
+	font-weight: 400
+	font-size: 24px
+	line-height: 33px
+	letter-spacing: 0.05em
+	background-color: #242423
+	position: relative
+	max-width: 580px
+	@media (max-width: 1240px)
+		font-size: 20px
+		max-width: 440px
+	@media (max-width: 1024px)
+		font-size: 18px
+		max-width: 340px
+	@media (max-width: 744px)
+		font-size: 15px
+		max-width: 200px
+		line-height: 23px
+	@media (max-width: 375px)
+		background-color: rgba(36, 36, 35, 0.6)
+		font-size: 14px
+		max-width: 180px
+		letter-spacing: 0
+		line-height: 20px
 a
 	font-family: Roboto
 	text-decoration: none
@@ -17,12 +48,14 @@ a
 li
 	list-style-type: none
 body
+	display: flex
+	justify-content: center
 	background-color: $black
 	width: 100vw
 	color: $bege
 	font-family: Roboto
 	overflow-x: hidden
-	font-size: 18px
+	font-size: 16px
 header
 	background-color: $black
 	position: fixed
@@ -30,6 +63,30 @@ header
 	z-index: 10
 	width: 100vw
 	border-bottom: 1px solid rgba(245, 203, 92, 1)
+section
+	margin: 50px 0
+.link-btn
+	color: $black
+	display: flex
+	align-items: center
+	justify-content: center
+	font-family: 'Bauhaus'
+	font-style: normal
+	font-weight: 500
+	font-size: 18px
+	width: 192px
+	height: 60px
+	background: linear-gradient(187.47deg, #F5CB5C 14.91%, #F37935 86%)
+	box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.25)
+	border-radius: 8px
+	@media (max-width: 744px)
+		font-size: 15px
+		width: 146px
+		height: 46px
+.link-btn:hover
+	transform: scale(0.93)
+	transition-duration: 0.2s
+	background: linear-gradient(187.47deg, #F5CB5C 14.91%, #EB5E28)
 .header__block
 	height: 90px
 	max-width: 1440px
@@ -38,13 +95,30 @@ header
 	display: flex
 	justify-content: space-between
 	align-items: center
+	padding: 0 80px
 	@media (max-width: 1440px)
 		padding: 0 60px
+	@media (max-width: 1024px)
+		max-width: 1024px
+		padding: 0 40px
+	@media (max-width: 744px)
+		height: 70px
+		max-width: 744px
+	@media (max-width: 430px)
+		height: 55px
+		max-width: 430px
+		padding: 0 20px
+	@media (max-width: 320px)
+		max-width: 320px
+		padding: 0 10px
 	&-logo
 		height: 46px
 		width: 248px
+		@media (max-width: 430px)
+			width: 180px
+			height: 40px
 		img
-			width: 248px
+			width: 100%
 	&-lists
 		display: flex
 		justify-content: space-between
@@ -54,11 +128,14 @@ header
 		@media (max-width: 744px)
 			flex-direction: column
 			margin-left: 5vw
+			row-gap: 20px
 		li
 			@media (max-width: 1239px)
 				font-size: 16px
 			@media (max-width: 744px)
 				font-size: 22px
+		li:hover 
+			transform: scale(1.05)
 			a:hover
 				color: $orange
 				text-decoration: underline
@@ -94,15 +171,16 @@ header
 	background-size: contain
 	background-repeat: no-repeat
 	border-radius: 0px
-	background: url("../assets/icon/burger.webp")
+	background: url("../assets/icon/burger.svg")
 	border: none
 	z-index: 11
 	@media (max-width: 1024px)
 		order: 3
 		display: block
-	@media (max-width: 380px)
-		width: 50px
-		height: 32px
+	@media (max-width: 430px)
+		background-size: cover
+		width: 44px
+		height: 26px
 .burger:hover
 	cursor: pointer
 .close
@@ -110,7 +188,7 @@ header
 	width: 40px
 	height: 40px
 	margin: 0 20px 20px 0px
-	background: url("../assets/icon/burger-close.webp")
+	background: url("../assets/icon/burger-close.svg")
 	background-size: contain
 	background-repeat: no-repeat
 	@media (max-width: 1024px)
@@ -118,6 +196,10 @@ header
 		position: absolute
 		right: 20px
 		border: none
+	@media (max-width: 430px)
+		background-size: contain
+		width: 30px
+		height: 30px
 .close:hover
 	cursor: pointer
 .navigation__header
@@ -136,3 +218,53 @@ header
 .navigation__header.show
 	transform: translateX(0vw)
 	transition: all 0.6s ease
+.home__subheader
+	max-width: 1440px
+	position: relative
+	top: 40px
+	display: flex
+	justify-content: center
+	overflow-x: hidden
+	@media (max-width: 390px)
+		top: 0px
+	img
+		position: relative
+		width: 100%
+		z-index: -1
+		object-fit: cover
+		@media (max-width: 744px)
+			width: 200%
+	&-content
+		position: absolute
+		height: 60%
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		left: 0px
+		top: 200px
+		padding: 0 80px
+		@media (max-width: 1440px)
+			padding: 0 60px
+			height: 50%
+			top: 150px
+		@media (max-width: 1024px)
+			padding: 0 40px
+			height: 60%
+			top: 100px
+		@media (max-width: 430px)
+			padding: 0 20px
+			height: 60%
+		@media (max-width: 390px)
+			padding: 0 10px
+			height: 60%
+		@media (max-width: 375px)
+			padding: 0 10px
+			height: 60%
+			top: 80px
+
+	&-btns
+		max-width: 460px
+		position: relative
+		display: flex
+		justify-content: space-between
+		align-items: center
