@@ -79,8 +79,14 @@ header
 	z-index: 10
 	width: 100vw
 	border-bottom: 1px solid $orange
+	border-image: linear-gradient(238.23deg, #F5CB5C 6.01%, #EB5E28 98.62%)
+	border-image-slice: 1
 section
 	margin: 50px 0
+	@media (max-width: 1024px)
+		margin: 30px 0
+	@media (max-width: 559px)
+		margin: 15px 0
 .link-btn
 	color: $black
 	display: flex
@@ -283,8 +289,10 @@ section
 		justify-content: space-between
 		align-items: center
 .home__services
+	position: relative
 	max-width: 1440px
 	padding: 0 80px
+	overflow: hidden
 	@media (max-width: 1440px)
 		padding: 0 60px
 	@media (max-width: 1024px)
@@ -302,6 +310,8 @@ section
 			gap: 20px
 		@media (max-width: 1024px)
 			gap: 20px
+		@media (max-width: 390px)
+			gap: 15px
 	&-card
 		display: flex
 		flex-direction: column
@@ -315,26 +325,175 @@ section
 		border: 1px solid #D8D3CF
 		box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25), 2px 2px 4px rgba(0, 0, 0, 0.25)
 		backdrop-filter: blur(25px)
-		border-radius: 20px
+		border-radius: 15px
 		padding: 22px
 		text-align: center
 		@media (max-width: 1289px)
 			width: 180px
 			height: 180px
+			padding: 10px
 		@media (max-width: 1139px)
 			width: 150px
-			height: 150px
-			padding: 14px
+			height: 170px
+			padding: 10px
 		@media (max-width: 649px)
 			width: 120px
-			height: 120px
+			height: 150px
 			font-size: 14px
+			border-radius: 10px
 		@media (max-width: 559px)
 			width: 37vw
-			height: 130px
+			height: 160px
 		img
 			@media (max-width: 1139px)
 				width: 85%
 			@media (max-width: 1024px)
 				width: 80%
+	&-card:hover
+		cursor: pointer
+		border-image: linear-gradient(238.23deg, #F5CB5C 6.01%, #EB5E28 98.62%)
+		border-image-slice: 1
+		img
+			display: none
+		div
+			display: none
+		p
+			display: block
+		a
+			color: $yellow
+			font-size: 15px
+			display: flex
+			align-items: center
+			span
+				font-size: 20px
+				padding: 0 4px
+	&-back
+		display: none
+		text-align: left
+		font-size: 13px
+		@media (max-width: 1139px)
+			font-size: 12px
+		a:hover
+			color: $orange
+.background
+	position: absolute
+	z-index: -1
+.background span
+	width: 20vmin
+	height: 20vmin
+	border-radius: 50vmin
+	backface-visibility: hidden
+	position: absolute
+	animation-name: move
+	animation-duration: 60s
+	animation-timing-function: linear
+	animation-iteration-count: infinite
 
+.background span:nth-child(1)
+	color: $orange
+	top: 7%
+	right: 2%
+	animation-duration: 17.3s
+	animation-delay: -5.4s
+	transform-origin: 30vw -20vh
+	box-shadow: 40vmin 0 12.3451104812vmin currentColor
+.background span:nth-child(2)
+	color: #F5CB5C
+	top: 83%
+	right: 86%
+	animation-duration: 11s
+	animation-delay: -59.9s
+	transform-origin: 13vw 4vh
+	box-shadow: 40vmin 0 8.5216725246vmin currentColor
+.background span:nth-child(3)
+	color: #F5CB5C
+	top: 82%
+	left: 27%
+	animation-duration: 54.8s
+	animation-delay: -37.2s
+	transform-origin: -7vw 0vh
+	box-shadow: -40vmin 0 6.5865278986vmin currentColor
+.background span:nth-child(4)
+	color: #F5CB5C
+	top: 43%
+	left: 57%
+	animation-duration: 52.1s
+	animation-delay: -10.9s
+	transform-origin: -14vw -12vh
+	box-shadow: -40vmin 0 9.8063831834vmin currentColor
+
+.background span:nth-child(5)
+	color: #F5CB5C
+	top: 35%
+	left: 59%
+	animation-duration: 39.4s
+	animation-delay: -56.4s
+	transform-origin: 4vw 15vh
+	box-shadow: 40vmin 0 5.0012269834vmin currentColor
+
+.background span:nth-child(6)
+	color: #F37935
+	bottom: 20%
+	right: -10%
+	animation-duration: 30s
+	animation-delay: -4.4s
+	transform-origin: 10vw 18vh
+	box-shadow: 40vmin 0 11.9053170481vmin currentColor
+
+.background span:nth-child(7)
+	color: #F5CB5C
+	top: 26%
+	left: 38%
+	animation-duration: 59.5s
+	animation-delay: -3.8s
+	transform-origin: -13vw -10vh
+	box-shadow: -40vmin 0 8.2035411968vmin currentColor
+
+.background span:nth-child(8)
+	color: #F5CB5C
+	top: 96%
+	left: 48%
+	animation-duration: 50.3s
+	animation-delay: -16.5s
+	transform-origin: 10vw 10vh
+	box-shadow: -40vmin 0 5.8673108007vmin currentColor
+
+.background span:nth-child(9)
+	color: #F5CB5C
+	top: 49%
+	left: 32%
+	animation-duration: 17.9s
+	animation-delay: -28.2s
+	transform-origin: -14vw -8vh
+	box-shadow: -40vmin 0 13.5062536341vmin currentColor
+
+.background span:nth-child(10)
+	color: #F5CB5C
+	top: 37%
+	left: 49%
+	animation-duration: 45.2s
+	animation-delay: -14.2s
+	transform-origin: 8vw 1vh
+	box-shadow: -40vmin 0 7.0902789397vmin currentColor
+
+.background span:nth-child(11)
+	color: #F5CB5C
+	top: 38%
+	left: 45%
+	animation-duration: 27.5s
+	animation-delay: -19.6s
+	transform-origin: 1vw 24vh
+	box-shadow: 40vmin 0 5.3504984971vmin currentColor
+
+.background span:nth-child(12)
+	color: #F5CB5C
+	top: 19%
+	left: 99%
+	animation-duration: 38.9s
+	animation-delay: -45.2s
+	transform-origin: -11vw 19vh
+	box-shadow: 40vmin 0 10.0104142643vmin currentColor
+
+@keyframes move
+	100%
+		transform: translate3d(0, 0, 1px) rotate(360deg)
