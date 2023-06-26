@@ -375,6 +375,11 @@ section {
   font-weight: 100;
   font-style: unset;
 }
+@media (max-width: 744px) {
+  .header__block-button {
+    display: none;
+  }
+}
 
 .header__block-button:hover {
   background: #D8D3CF;
