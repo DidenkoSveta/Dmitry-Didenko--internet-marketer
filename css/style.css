@@ -156,6 +156,7 @@ header {
 }
 
 section {
+  width: 100vw;
   margin: 40px 0;
 }
 @media (max-width: 1024px) {
@@ -1669,6 +1670,7 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin: 0 auto;
   max-width: 1440px;
   padding: 0 80px;
   margin-top: 70px;
@@ -1793,6 +1795,9 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   max-width: 1440px;
   padding: 0 80px;
   margin: 70px 0 40px;
@@ -2140,6 +2145,12 @@ footer {
 
 @media (max-width: 1024px) {
   #footer-navigation {
+    display: none;
+  }
+}
+
+@media (max-width: 740px) {
+  #footer-services {
     display: none;
   }
 }/*# sourceMappingURL=style.css.map */
