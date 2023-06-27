@@ -29,16 +29,20 @@ h2
 	font-size: 40px
 	letter-spacing: 0.09em
 	text-align: left
-	margin: 50px 0
+	margin: 50px 0px
 	@media (max-width: 1240px)
 		font-size: 36px
 	@media (max-width: 1024px)
-		margin: 20px 0
+		margin: 20px 0px
 		font-size: 28px
-		margin-bottom: 40px 
+		margin-bottom: 40px
 	@media (max-width: 390px)
 		font-size: 22px
-		margin-bottom: 30px 0
+		margin-bottom: 30px 0px
+	@media (max-width: 390px)
+		margin: 20px 0px
+		line-height: 28px
+		text-align: center
 h3
 	color: $bege
 	font-family: 'Roboto'
@@ -99,8 +103,10 @@ header
 	border-image: linear-gradient(238.23deg, #F5CB5C 6.01%, #EB5E28 98.62%)
 	border-image-slice: 1
 section
+	display: flex
+	justify-content: center
 	width: 100vw
-	margin: 40px 0
+	margin: 40px auto
 	@media (max-width: 1024px)
 		margin: 40px 0
 	@media (max-width: 559px)
@@ -162,11 +168,14 @@ section
 	&-logo
 		height: 46px
 		width: 248px
-		@media (max-width: 430px)
-			width: 180px
-			height: 40px
 		@media (max-width: 1024px)
 			width: 220px
+		@media (max-width: 430px)
+			width: 200px
+			height: 40px
+		@media (max-width: 320px)
+			width: 180px
+			height: 33px
 		img
 			width: 100%
 	&-lists
@@ -229,7 +238,7 @@ section
 .burger
 	display: none
 	width: 60px
-	height: 36px
+	height: 35px
 	background-size: contain
 	background-repeat: no-repeat
 	border-radius: 0px
@@ -426,6 +435,8 @@ section
 		padding-top: 40px
 	@media (max-width: 559px)
 		padding-top: 30px
+	@media (max-width: 320px)
+		padding-top: 10px
 .background
 	position: absolute
 	width: 100vw
@@ -567,6 +578,8 @@ section
 		padding: 0 20px
 	@media (max-width: 390px)
 		padding: 0 10px
+	@media (max-width: 390px)
+		margin-top: 40px
 	h2
 		margin-bottom: 20px
 		@media (max-width: 1024px)
@@ -770,6 +783,8 @@ section
 	@media (max-width: 390px)
 		margin: 50px 10px
 		border-radius: 15px
+	@media (max-width: 320px)
+		margin: 50px 10px 20px
 	&-grid
 		display: flex
 		flex-direction: column
@@ -863,6 +878,7 @@ section
 		padding: 0 20px
 	@media (max-width: 390px)
 		padding: 0 10px
+		align-items: center
 	&-grid
 		display: flex
 		flex-wrap: wrap
@@ -881,7 +897,7 @@ section
 		width: 360px
 		height: 150px
 		border-radius: 20px
-		border: 1px solid var(--yellow, #F5CB5C)
+		border: 1px solid $yellow
 		background: rgba(36, 36, 35, 0.80)
 		box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25), 2px 4px 4px 0px rgba(0, 0, 0, 0.25)
 		backdrop-filter: blur(25px)
@@ -892,10 +908,11 @@ section
 		@media (max-width: 1150px)
 			width: 270px
 		@media (max-width: 1024px)
+			border: 0.5px solid $yellow
 			font-size: 14px
 			width: 28vw
 			height: 130px
-			padding: 10px
+			padding: 10px 20px
 			border-radius: 10px
 			img
 				width: 86px
@@ -951,7 +968,7 @@ section
 		line-height: 22px
 		font-family: Roboto
 		font-weight: 300
-		margin: 30px 0
+		margin: 30px 0px
 		@media (max-width: 1024px)
 			br
 				display: none
@@ -1022,10 +1039,15 @@ footer
 		padding: 0 60px
 	@media (max-width: 1024px)
 		padding: 0 40px
+		gap: 4vw
 	@media (max-width: 559px)
 		margin-top: 15px
+		column-gap: 3vh
+		row-gap: 0px
 	@media (max-width: 430px)
+		justify-content: center
 		padding: 0 20px
+		row-gap: 3vh
 	@media (max-width: 390px)
 		padding: 0 10px
 	&-copyright
@@ -1041,16 +1063,28 @@ footer
 			margin-top: 15px
 		@media (max-width: 430px)
 			padding: 0 20px
+			text-align: center
+			line-height: 20px
 		@media (max-width: 390px)
 			padding: 0 10px
+	&-button
+		background: $black
+		color: $bege
+		border: 1px solid $bege
+		font-weight: 100
+		font-style: unset
 	&-row
 		display: flex
 		flex-direction: column
 		gap: 28px
+		@media (max-width: 430px)
+			align-items: center
 		ul
 			display: flex
 			flex-direction: column
 			gap: 15px
+			@media (max-width: 430px)
+				align-items: center
 			li
 				@media (max-width: 1024px)
 					font-size: 14px
@@ -1086,13 +1120,18 @@ footer
 	border-image: linear-gradient(238.23deg, #F5CB5C 6.01%, #EB5E28 98.62%)
 	border-image-slice: 0.5
 .hr-copyright
-	margin: 30px 0
+	margin: 30px 0px
 	border-image: linear-gradient(238.23deg, #EB5E28 6.01%, #F5CB5C 98.62%)
 	border-image-slice: 0.5
 	height: 0px
 	opacity: 0.4
+#footer-contacts
+	@media (max-width: 1024px)
+		order: 2
 #footer-navigation
 	@media (max-width: 1024px)
+		order: 1
+	@media (max-width: 430px)
 		display: none
 #footer-services
 	@media (max-width: 740px)
