@@ -23,6 +23,20 @@ input
 input:autofill, input:autofill:focus, input:autofill:hover
 	transition: background-color 5000s ease-in-out 0s
 	-webkit-text-fill-color: $black
+h1
+	font-family: 'Bauhaus'
+	font-size: 38px
+	letter-spacing: 0.05em
+	@media (max-width: 1040px)
+		font-size: 32px
+	@media (max-width: 904px)
+		font-size: 26px
+		margin: 0 auto
+		text-align: center
+	@media (max-width: 768px)
+		font-size: 24px
+	@media (max-width: 450px)
+		font-size: 20px
 h2
 	display: block
 	font-family: 'Bauhaus'
@@ -1344,40 +1358,44 @@ footer
 	@media (max-width: 390px)
 		margin-top: 10vh
 
-
 //faq page
+.section__faq
+	position: relative
 .faq__block
 	max-width: 1440px
 	box-sizing: border-box
 	margin: 0 auto
-	padding: 100px 80px 50px
+	padding: 100px 80px 110px
 	@media (max-width: 1440px)
-		padding: 80px 60px 30px
+		padding: 80px 60px 80px
 	@media (max-width: 1024px)
 		padding: 80px 40px 50px
 		gap: 4vw
 	@media (max-width: 559px)
+		display: flex
+		flex-direction: column
 		margin-top: 10px
 		column-gap: 3vh
 		row-gap: 0px
 	@media (max-width: 430px)
 		justify-content: center
-		padding: 40px 20px 20px
+		padding: 40px 20px 40px
 		row-gap: 3vh
 	@media (max-width: 390px)
 		margin-top: 30px
-		padding: 40px 10px 20px
+		padding: 40px 10px 40px
 	&-grid
 		display: flex
 		flex-wrap: wrap
 		justify-content: space-between
 		gap: 30px
-		max-width: 1240px
+		max-width: 1440px
 		margin: 0 auto
 		@media (max-width: 1440px)
 			max-width: 1440px
 			column-gap: 2vh
 			row-gap: 3vh
+			justify-content: space-around
 		@media (max-width: 904px)
 			flex-direction: column
 			align-items: center
@@ -1407,6 +1425,15 @@ footer
 			font-size: 14px
 		@media (max-width: 390px)
 			font-size: 12px
+	&-title
+		margin-bottom: 50px
+		text-align: left
+		@media (max-width: 1200px)
+			margin-bottom: 30px
+		@media (max-width: 904px)
+			margin-bottom: 20px
+		@media (max-width: 390px)
+			margin-bottom: 10px
 .faq__block-btn
 	display: flex
 	justify-content: space-between
@@ -1426,11 +1453,14 @@ footer
 		width: 44vw
 	@media (max-width: 1200px)
 		width: 40vw
+	@media (max-width: 1000px)
+		font-size: 15px
 	@media (max-width: 904px)
 		width: 80vw
 	@media (max-width: 390px)
 		font-size: 14px
-		height: 40px
+		height: 45px
+		text-align: left
 	p
 		display: flex
 		gap: 10px
@@ -1471,3 +1501,29 @@ footer
 	position: relative
 	transition: transform .35s
 	transform: rotate(45deg)
+#rocket-faq2
+	position: absolute
+	z-index: -1
+	left: -120px
+	bottom: 0px
+	@media (max-width: 1440px)
+		width: 500px
+		left: -150px
+	@media (max-width: 1040px)
+		display: none
+#rocket-faq1
+	position: absolute
+	width: 132px
+	z-index: -1
+	right: 50px
+	top: 80px
+	@media (max-width: 1440px)
+		width: 112px
+		top: 50px
+		right: 10px
+	@media (max-width: 1040px)
+		display: none
+.faq__hr-footer
+	margin-top: 0px
+.section__faq
+	margin-bottom: 0px
