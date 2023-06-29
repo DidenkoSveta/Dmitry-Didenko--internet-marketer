@@ -96,7 +96,7 @@ header
 	background-color: $black
 	position: fixed
 	top: 0
-	z-index: 10
+	z-index: 12
 	width: 100vw
 	border-bottom: 1px solid $orange
 	border-image: linear-gradient(238.23deg, #F5CB5C 6.01%, #EB5E28 98.62%)
@@ -1012,6 +1012,103 @@ section
 		@media (max-width: 559px)
 			flex-direction: column
 			gap: 10px
+	&-text
+		display: flex
+		flex-direction: column
+		gap: 15px
+		@media (max-width: 390px)
+			gap: 10px
+		p, a
+			color: $bege
+			font-size: 20px
+			font-family: Roboto
+			font-weight: 300
+			letter-spacing: 0.7px
+			@media (max-width: 1300px)
+				font-size: 18px
+			@media (max-width: 1220px)
+				font-size: 16px
+		a
+			font-weight: 400
+		a:hover
+			transform: scale(1.05)
+			color: $yellow
+	&-card
+		display: flex
+		align-items: center
+		gap: 30px
+		@media (max-width: 1300px)
+			gap: 15px
+		@media (max-width: 390px)
+			gap: 10px
+	&-contacts
+		display: flex
+		flex-direction: column
+		row-gap: 10vh
+		@media (max-width: 1040px)
+			display: flex
+			flex-direction: row
+			flex-wrap: wrap
+			justify-content: space-between
+			gap: 30px
+	&-messengers
+		display: flex
+		gap: 20px
+		img
+			@media (max-width: 390px)
+				width: 30px
+	&-messengers
+		a:hover
+			transform: scale(1.15)
+	&-icon
+		display: flex
+		align-items: center
+		justify-content: center
+		img
+			z-index: 2
+			position: absolute
+			width: 40px
+			@media (max-width: 1300px)
+				width: 35px
+			@media (max-width: 390px)
+				width: 26px
+	&-img
+		width: 0
+		height: 0
+		border: 60px solid transparent
+		border-bottom-color: #333533
+		position: relative
+		top: -60px
+		@media (max-width: 1300px)
+			border: 50px solid transparent
+			top: -50px
+			border-bottom-color: #333533
+		@media (max-width: 390px)
+			border: 36px solid transparent
+			top: -36px
+			border-bottom-color: #333533
+	&-img:after
+		content: ""
+		width: 0
+		height: 0
+		position: absolute
+		left: -60px
+		right: -60px
+		top: 60px
+		border: 60px solid transparent
+		border-top-color: #333533
+		@media (max-width: 1300px)
+			left: -50px
+			right: -50px
+			top: 49px
+			border: 50px solid transparent
+			border-top-color: #333533
+		@media (max-width: 390px)
+			left: -36px
+			right: -36px
+			top: 36px
+			border: 36px solid transparent
+			border-top-color: #333533
 #contact-name, #contact-tel
 	color: $bege
 	border: none
@@ -1053,6 +1150,10 @@ form
 .button__contact
 	background: $yellow
 .button__contact:hover
+	background: linear-gradient(187.47deg, #F5CB5C 14.91%, #EB5E28)
+	color: $black
+	transform: scale(1.03)
+	transition-duration: 0.2s
 	cursor: pointer
 footer
 	background: url('../assets/bg/footer-bg.png')
@@ -1106,6 +1207,11 @@ footer
 		border: 1px solid $bege
 		font-weight: 100
 		font-style: unset
+	&-button:hover
+		background: $bege
+		color: $black
+		transform: scale(1.03)
+		transition-duration: 0.2s
 	&-row
 		display: flex
 		flex-direction: column
@@ -1208,5 +1314,160 @@ footer
 	@media (max-width: 740px)
 		right: calc(15%)
 
-
 // contacts page
+#contact__page
+	border-radius: 15px
+	width: 724px
+	padding: 40px 50px
+	border: 3px solid $mdgrey
+	background: $black
+	@media (max-width: 1024px)
+		width: 90vw
+		padding: 40px
+		border-radius: 10px
+	@media (max-width: 430px)
+		width: 90vw
+		padding: 30px 20px
+#contact__form
+	margin-top: 15vh
+	display: flex
+	flex-direction: row
+	align-items: center
+	justify-content: space-between
+	width: 1400px
+	gap: 25px
+	@media (max-width: 1440px)
+		width: 100vw
+	@media (max-width: 1040px)
+		flex-direction: column
+		gap: 50px
+	@media (max-width: 390px)
+		margin-top: 10vh
+
+
+//faq page
+.faq__block
+	max-width: 1440px
+	box-sizing: border-box
+	margin: 0 auto
+	padding: 100px 80px 50px
+	@media (max-width: 1440px)
+		padding: 80px 60px 30px
+	@media (max-width: 1024px)
+		padding: 80px 40px 50px
+		gap: 4vw
+	@media (max-width: 559px)
+		margin-top: 10px
+		column-gap: 3vh
+		row-gap: 0px
+	@media (max-width: 430px)
+		justify-content: center
+		padding: 40px 20px 20px
+		row-gap: 3vh
+	@media (max-width: 390px)
+		margin-top: 30px
+		padding: 40px 10px 20px
+	&-grid
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		gap: 30px
+		max-width: 1240px
+		margin: 0 auto
+		@media (max-width: 1440px)
+			max-width: 1440px
+			column-gap: 2vh
+			row-gap: 3vh
+		@media (max-width: 904px)
+			flex-direction: column
+			align-items: center
+		@media (max-width: 390px)
+			row-gap: 2.5vh
+	&-card
+		width: 600px
+		@media (max-width: 1440px)
+			width: 44vw
+		@media (max-width: 1200px)
+			width: 40vw
+		@media (max-width: 904px)
+			width: 80vw
+	&-panel
+		padding: 0 10px
+		display: none
+		background-color: $black
+		overflow: hidden
+		border: 1px solid $orange
+	&-text
+		color: $bege
+		font-size: 16px
+		padding: 10px 1px
+		letter-spacing: 0.15px
+		line-height: 20px
+		@media (max-width: 1200px)
+			font-size: 14px
+		@media (max-width: 390px)
+			font-size: 12px
+.faq__block-btn
+	display: flex
+	justify-content: space-between
+	align-items: center
+	padding: 0px 15px
+	background: $black
+	box-shadow: 4px 4px 3px rgba(47, 51, 56, 0.3)
+	border-radius: 5px
+	border: 1px solid $yellow
+	width: 600px
+	height: 46px
+	font-size: 16px
+	cursor: pointer
+	color: $bege
+	font-weight: 300
+	@media (max-width: 1440px)
+		width: 44vw
+	@media (max-width: 1200px)
+		width: 40vw
+	@media (max-width: 904px)
+		width: 80vw
+	@media (max-width: 390px)
+		font-size: 14px
+		height: 40px
+	p
+		display: flex
+		gap: 10px
+	span
+		color: $yellow
+		font-weight: 400
+.faq__block-btn:hover
+	border: 1px solid $orange
+	span
+		color: $orange
+.faq__block-btn:active
+	border: 1px solid $orange
+	span
+		color: $orange
+.faq__block-btn:focus
+	border: 1px solid $orange
+	span
+		color: $orange
+.faq__block-btn::after
+	content: " "
+	display: block
+	position: relative
+	background: url("../assets/icon/faq.svg")
+	color: $yellow
+	width: 21px
+	height: 21px
+	background-size: contain
+	background-repeat: no-repeat
+	margin-right: 10px
+.active, #faq__block-btn:hover
+	background: $black
+	transform: scale(1.02)
+	transition-duration: 0.8s
+.active::after
+	background: url("../assets/icon/faq-orange.svg")
+	content: ""
+	display: block
+	position: relative
+	transition: transform .35s
+	transform: rotate(45deg)
