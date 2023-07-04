@@ -2974,4 +2974,59 @@ footer {
 
 .section__faq {
   margin-bottom: 0px;
+}
+
+.context__about {
+  max-width: 1440px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0 auto;
+  padding: 100px 80px 110px;
+}
+@media (max-width: 1440px) {
+  .context__about {
+    padding: 80px 60px 80px;
+  }
+}
+@media (max-width: 1024px) {
+  .context__about {
+    padding: 80px 40px 50px;
+    gap: 4vw;
+  }
+}
+@media (max-width: 559px) {
+  .context__about {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 10px;
+    -webkit-column-gap: 3vh;
+       -moz-column-gap: 3vh;
+            column-gap: 3vh;
+    row-gap: 0px;
+  }
+}
+@media (max-width: 430px) {
+  .context__about {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 40px 20px 40px;
+    row-gap: 3vh;
+  }
+}
+@media (max-width: 390px) {
+  .context__about {
+    margin-top: 30px;
+    padding: 40px 10px 40px;
+  }
+}
+.context__about-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }/*# sourceMappingURL=style.css.map */
