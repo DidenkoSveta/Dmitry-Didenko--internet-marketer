@@ -1539,23 +1539,22 @@ footer
 .section__faq
 	margin-bottom: 0px
 
-
 	//context-page
 .context__about
 	width: 1440px
 	box-sizing: border-box
 	margin: 0 auto
-	padding: 50px 80px 110px
+	padding: 50px 80px 0px
 	display: flex
 	flex-direction: column
 	align-items: center
 	@media (max-width: 1440px)
 		max-width: 1440px
-		padding: 50px 60px 80px
+		padding: 50px 60px 0px
 	@media (max-width: 1024px)
-		padding: 50px 40px 50px
+		padding: 50px 40px 0px
 	@media (max-width: 768px)
-		padding: 40px 40px 30px
+		padding: 40px 40px 0px
 	h1
 		display: flex
 		justify-content: center
@@ -1582,10 +1581,13 @@ footer
 		justify-content: space-between
 		width: 1100px
 		align-items: center
+		padding-top: 20px
 		@media (max-width: 1440px)
 			width: 980px
+			padding-top: 40px
 		@media (max-width: 1240px)
 			width: 85vw
+			padding-top: 10px
 		@media (max-width: 1040px)
 			width: 85vw
 		@media (max-width: 900px)
@@ -1595,6 +1597,8 @@ footer
 		@media (max-width: 768px)
 			flex-direction: column
 			gap: 40px
+		@media (max-width: 425px)
+			gap: 60px
 	&-btn
 		display: flex
 		width: 400px
@@ -1646,7 +1650,7 @@ footer
 				gap: 12px
 			@media (max-width: 768px)
 				gap: 8px
-	&-img 
+	&-img
 		display: flex
 		flex-direction: column
 		align-items: center
@@ -1670,16 +1674,18 @@ footer
 		width: 100vw
 		background: $gray
 		height: 170px
-		margin: 100px 0
+		margin: 120px 0 60px
 		@media (max-width: 1440px)
-			margin: 70px 0
+			margin: 120px 0 60px
 			height: 140px
 		@media (max-width: 1240px)
 			height: 120px
-			margin: 60px 0
+			margin: 80px 0 60px
 		@media (max-width: 768px)
 			height: 100px
-			margin: 40px 0
+			margin: 60px 0 40px
+		@media (max-width: 425px)
+			height: 140px
 		h4
 			width: 930px
 			text-align: center
@@ -1690,7 +1696,190 @@ footer
 				font-size: 18px
 				width: 600px
 				letter-spacing: normal
+				line-height: 28px
 			@media (max-width: 768px)
 				font-size: 14px
 				width: 90vw
-			
+			@media (max-width: 425px)
+				line-height: 22px
+
+.context__steps
+	display: flex
+	justify-content: space-between
+	width: 1440px
+	flex-wrap: wrap
+	justify-content: center
+	margin-bottom: 50px
+	@media (max-width: 1440px)
+		width: 98vw
+		padding: 0 60px
+	@media (max-width: 1024px)
+		padding: 0 40px
+	@media (max-width: 559px)
+		margin-top: 15px
+		column-gap: 3vh
+		row-gap: 0px
+	@media (max-width: 430px)
+		justify-content: center
+		padding: 0 20px
+		row-gap: 3vh
+	@media (max-width: 390px)
+		margin-top: 30px
+		padding: 0 10px
+	h2
+		font-family: Roboto
+		font-weight: 400
+		line-height: normal
+		letter-spacing: 1.4px
+		margin: 36px 0 20px
+		@media (max-width: 1240px)
+			margin: 10px 0 0
+		@media (max-width: 1024px)
+			margin: 20px 0 0
+			text-align: center
+		@media (max-width: 1024px)
+			margin: 0px
+	&-grid
+		position: relative
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-around
+		row-gap: 35px
+		width: 1100px
+		margin-top: 50px
+		@media (max-width: 1240px)
+			width: 92vw
+			row-gap: 30px
+			margin-top: 60px
+		@media (max-width: 768px)
+			margin-top: 20px
+	&-card:nth-child(2n)
+		position: relative
+		top: 90px
+		@media (max-width: 1240px)
+			top: 70px
+		@media (max-width: 1024px)
+			top: 0px
+	&-card
+		display: flex
+		align-items: center
+		width: 460px
+		justify-content: space-between
+		gap: 16px
+		@media (max-width: 1240px)
+			width: 430px
+		@media (max-width: 1024px)
+			gap: 14px
+	&-number
+		font-family: Roboto
+		font-size: 120px
+		font-style: normal
+		font-weight: 900
+		-webkit-text-fill-color: $black
+		-webkit-text-stroke: 0.5px $yellow
+		text-shadow: 0 0 10px rgba(245, 203, 92, 0.40)
+		@media (max-width: 1240px)
+			font-size: 100px
+		@media (max-width: 768px)
+			font-size: 90px
+		@media (max-width: 425px)
+			font-size: 80px
+	&-name
+		color: #D8D3CF
+		font-family: Roboto
+		font-size: 24px
+		font-style: normal
+		font-weight: 400
+		line-height: normal
+		letter-spacing: 1.2px
+		@media (max-width: 1240px)
+			font-size: 20px
+		@media (max-width: 768px)
+			font-size: 16px
+	&-line
+		height: 1px
+		width: 300px
+		background: $bege
+		margin: 16px 0
+		@media (max-width: 1240px)
+			margin: 10px 0
+		@media (max-width: 1240px)
+			width: 250px
+		@media (max-width: 768px)
+			width: 200px
+		@media (max-width: 425px)
+			height: 0.5px
+			margin: 8px 0
+	&-text
+		p
+			line-height: normal
+#additional
+	background: $gray
+	width: 100vw
+	margin: 150px 0
+.context__additional
+	display: flex
+	justify-content: space-between
+	max-width: 1440px
+	flex-wrap: wrap
+	justify-content: center
+	margin: 50px 0
+	@media (max-width: 1440px)
+		padding: 0 60px
+	@media (max-width: 1024px)
+		padding: 0 40px
+	@media (max-width: 559px)
+		margin-top: 15px
+		column-gap: 3vh
+		row-gap: 0px
+	@media (max-width: 430px)
+		justify-content: center
+		padding: 0 20px
+		row-gap: 3vh
+	@media (max-width: 390px)
+		margin-top: 30px
+		padding: 0 10px
+	&-grid
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+		justify-content: center
+		gap: 20px
+		justify-content: space-between
+		flex-wrap: wrap
+	h2
+		font-family: Roboto
+		color: $yellow
+		font-weight: 400
+		line-height: normal
+		letter-spacing: 1.4px
+		margin: 36px 0 20px
+	&-card
+		margin-top: 40px
+		width: 440px
+		height: 160px
+		padding: 10px 14px
+		display: flex
+		align-items: center
+		justify-content: center
+		gap: 20px
+		border-radius: 20px
+		border: 1px solid #D8D3CF
+		background: #242423
+		box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25), 2px 4px 4px 0px rgba(0, 0, 0, 0.25)
+		backdrop-filter: blur(25px)
+		img
+			width: 50px
+	&-service
+		color: $yellow
+		font-family: Roboto
+		font-size: 16px
+		font-style: normal
+		font-weight: 600
+		line-height: normal
+		letter-spacing: 0.8px
+	&-text
+		display: flex
+		gap: 15px
+		flex-direction: column
+		max-width: 300px
