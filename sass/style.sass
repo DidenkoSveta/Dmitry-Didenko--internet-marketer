@@ -50,6 +50,10 @@ h2
 		margin: 20px 0px
 		font-size: 28px
 		margin-bottom: 40px
+	@media (max-width: 425px)
+		font-size: 24px
+		max-width: 80vw
+		text-align: center
 	@media (max-width: 390px)
 		font-size: 22px
 		margin-bottom: 30px 0px
@@ -1579,7 +1583,7 @@ footer
 			font-size: 20px
 	&-description
 		display: flex
-		justify-content: space-between
+		justify-content: space-evenly
 		width: 1100px
 		align-items: center
 		padding-top: 20px
@@ -1639,15 +1643,17 @@ footer
 			display: flex
 			flex-direction: column
 			gap: 16px
+			li
+				display: flex
 			li::before
 				content: ''
 				display: inline-block
 				position: relative
-				background: url('../assets/svg/list.svg')
+				background: url('../assets/svg/check-white.svg')
 				background-size: contain
 				background-repeat: no-repeat
-				height: 14px
-				width: 15px
+				height: 18px
+				width: 18px
 				margin-right: 5px
 			@media (max-width: 1240px)
 				gap: 12px
@@ -1731,14 +1737,13 @@ footer
 		margin-top: 30px
 		padding: 0 10px
 	&-title
-		width: 1440px
+		// width: 1440px
 	h2
-		max-width: 650px
-		font-family: Roboto
 		font-weight: 400
 		line-height: normal
 		letter-spacing: 1.4px
 		margin: 36px 0 20px
+		text-align: center
 		@media (max-width: 1240px)
 			margin: 10px 0 0
 		@media (max-width: 1024px)
@@ -1863,7 +1868,6 @@ footer
 		@media (max-width: 1440px)
 			width: 92vw
 	h2
-		font-family: Roboto
 		color: $yellow
 		font-weight: 350
 		line-height: normal
@@ -1892,7 +1896,6 @@ footer
 		border: 1px solid #D8D3CF
 		background: #242423
 		box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25), 2px 4px 4px 0px rgba(0, 0, 0, 0.25)
-		backdrop-filter: blur(25px)
 		img
 			width: 50px
 		@media (max-width: 1440px)
@@ -1975,6 +1978,7 @@ footer
 		max-width: 560px
 		span
 			color: $yellow
+			font-weight: 400
 	&-grid
 		row-gap: 60px
 	&-card:nth-child(2n)
@@ -2029,7 +2033,6 @@ footer
 		@media (max-width: 1440px)
 			width: 92vw
 	h2
-		font-family: Roboto
 		color: $yellow
 		font-weight: 350
 		line-height: normal
@@ -2050,15 +2053,14 @@ footer
 		margin-top: 40px
 		width: 600px
 		min-height: 300px
-		padding: 30px 30px
+		padding: 40px 30px
 		display: flex
-		align-items: center
+		align-items: flex-start
 		justify-content: space-evenly
 		border-radius: 20px
 		border: 1px solid #D8D3CF
 		background: #242423
 		box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25), 2px 4px 4px 0px rgba(0, 0, 0, 0.25)
-		backdrop-filter: blur(25px)
 		img
 			width: 70px
 			@media (max-width: 425px)
@@ -2138,3 +2140,68 @@ footer
 				gap: 13px
 			@media (max-width: 425px)
 				gap: 10px
+#seo__additional
+	width: 100vw
+	background: $gray
+	margin: 170px 0
+.seo__additional
+	max-width: 1440px
+	justify-content: center
+	display: flex
+	padding: 30px 80px 80px
+	@media (max-width: 1440px)
+		width: 100vw
+		padding: 80px 60px
+	@media (max-width: 1024px)
+		padding: 80px 40px
+	@media (max-width: 425px)
+
+	@media (max-width: 430px)
+		padding: 60px 20px
+	@media (max-width: 390px)
+		padding: 60px 10px
+	&-grid
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		gap: 30px
+		@media (max-width: 668px)
+			justify-content: center
+	&-card 
+		display: flex
+		gap: 16px
+		align-items: flex-start
+		min-height: 100px
+		@media (max-width: 668px)
+			min-height: 80px
+			gap: 10px
+	&-card::before
+		content: ''
+		display: inline-block
+		position: relative
+		background: url('../assets/svg/check-white.svg')
+		background-size: contain
+		background-repeat: no-repeat
+		height: 30px
+		width: 30px
+		margin-right: 5px
+	&-text 
+		display: flex
+		flex-direction: column
+		gap: 16px
+		width: 340px
+		@media (max-width: 1440px)
+			width: 300px
+		@media (max-width: 1240px)
+			width: 22vw
+		@media (max-width: 1080px)
+			width: 36vw
+		@media (max-width: 668px)
+			width: 44vw
+			gap: 10px
+		@media (max-width: 425px)
+			width: 70vw
+		div
+			text-transform: uppercase
+			letter-spacing: 0.48px
+			font-weight: 600
