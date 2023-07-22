@@ -27,6 +27,7 @@ h1
 	font-family: 'Bauhaus'
 	font-size: 36px
 	letter-spacing: 0.05em
+	text-transform: uppercase
 	@media (max-width: 1240px)
 		font-size: 32px
 	@media (max-width: 1040px)
@@ -46,6 +47,8 @@ h2
 	letter-spacing: 0.09em
 	text-align: left
 	margin: 50px 0px
+	text-transform: uppercase
+	line-height: 1.3em
 	@media (max-width: 1024px)
 		margin: 20px 0px
 		font-size: 28px
@@ -1584,11 +1587,11 @@ footer
 	&-description
 		display: flex
 		justify-content: space-evenly
-		width: 1100px
+		width: 1260px
 		align-items: center
 		padding-top: 20px
 		@media (max-width: 1440px)
-			width: 980px
+			width: 1100px
 			padding-top: 40px
 		@media (max-width: 1240px)
 			width: 85vw
@@ -1596,9 +1599,9 @@ footer
 		@media (max-width: 1040px)
 			width: 85vw
 		@media (max-width: 900px)
-			width: 90vw
+			width: 85vw
 		@media (max-width: 800px)
-			width: 92vw
+			width: 85vw
 		@media (max-width: 768px)
 			flex-direction: column
 			gap: 40px
@@ -1624,6 +1627,7 @@ footer
 	&-text
 		max-width: 400px
 	&-list
+		max-width: 500px
 		h4
 			max-width: 500px
 			margin-bottom: 30px
@@ -1640,21 +1644,29 @@ footer
 				font-size: 16px
 				margin-bottom: 16px
 		ul
+			position: relative
 			display: flex
 			flex-direction: column
 			gap: 16px
+			position: relative
+			margin-left: 25px
 			li
-				display: flex
+				line-height: 20px
+				@media (max-width: 1040px)
+					line-height: normal
+				span
+					font-weight: 500
 			li::before
 				content: ''
 				display: inline-block
-				position: relative
+				position: absolute
 				background: url('../assets/svg/check-white.svg')
 				background-size: contain
 				background-repeat: no-repeat
 				height: 18px
 				width: 18px
-				margin-right: 5px
+				left: -25px
+				margin-top: 3px
 			@media (max-width: 1240px)
 				gap: 12px
 			@media (max-width: 768px)
@@ -1740,7 +1752,7 @@ footer
 		// width: 1440px
 	h2
 		font-weight: 400
-		line-height: normal
+		line-height: 1.3em
 		letter-spacing: 1.4px
 		margin: 36px 0 20px
 		text-align: center
@@ -1870,7 +1882,7 @@ footer
 	h2
 		color: $yellow
 		font-weight: 350
-		line-height: normal
+		line-height: 1.3em
 		letter-spacing: 1.4px
 		margin-bottom: 20px
 		margin-top: 0px
@@ -2032,22 +2044,21 @@ footer
 		width: 1440px
 		@media (max-width: 1440px)
 			width: 92vw
-	h2
-		color: $yellow
-		font-weight: 350
-		line-height: normal
-		letter-spacing: 1.4px
-		margin-bottom: 20px
-		margin-top: 0px
-		max-width: 660px
-		text-align: left
-		@media (max-width: 1024px)
-			max-width: 500px
-		@media (max-width: 768px)
-			margin-bottom: 10px
-		@media (max-width: 560px)
-			text-align: center
-			margin-bottom: 0px
+		h2
+			color: $yellow
+			font-weight: 350
+			line-height: 1.3em
+			letter-spacing: 1.4px
+			margin-bottom: 70px
+			max-width: 660px
+			text-align: left
+			@media (max-width: 1024px)
+				max-width: 500px
+			@media (max-width: 768px)
+				margin-bottom: 50px
+			@media (max-width: 560px)
+				text-align: center
+				margin-bottom: 50px
 	&-card
 		box-sizing: border-box
 		margin-top: 40px
@@ -2148,7 +2159,7 @@ footer
 	max-width: 1440px
 	justify-content: center
 	display: flex
-	padding: 30px 80px 80px
+	padding: 50px 80px 100px
 	@media (max-width: 1440px)
 		width: 100vw
 		padding: 80px 60px
@@ -2164,10 +2175,13 @@ footer
 		display: flex
 		flex-wrap: wrap
 		justify-content: space-between
-		gap: 30px
+		column-gap: 30px
+		row-gap: 50px
 		@media (max-width: 668px)
 			justify-content: center
-	&-card 
+			column-gap: 20px
+			row-gap: 40px
+	&-card
 		display: flex
 		gap: 16px
 		align-items: flex-start
@@ -2185,7 +2199,7 @@ footer
 		height: 30px
 		width: 30px
 		margin-right: 5px
-	&-text 
+	&-text
 		display: flex
 		flex-direction: column
 		gap: 16px
@@ -2205,6 +2219,9 @@ footer
 			text-transform: uppercase
 			letter-spacing: 0.48px
 			font-weight: 600
+			line-height: 1.5em
+		p
+			line-height: 1.2em
 .email__additional-card
 	box-sizing: border-box
 	margin-top: 40px

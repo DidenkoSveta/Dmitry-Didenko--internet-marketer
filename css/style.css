@@ -37,6 +37,7 @@ h1 {
   font-family: "Bauhaus";
   font-size: 36px;
   letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 @media (max-width: 1240px) {
   h1 {
@@ -73,6 +74,8 @@ h2 {
   letter-spacing: 0.09em;
   text-align: left;
   margin: 50px 0px;
+  text-transform: uppercase;
+  line-height: 1.3em;
 }
 @media (max-width: 1024px) {
   h2 {
@@ -3082,7 +3085,7 @@ footer {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  width: 1100px;
+  width: 1260px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -3090,7 +3093,7 @@ footer {
 }
 @media (max-width: 1440px) {
   .context__about-description {
-    width: 980px;
+    width: 1100px;
     padding-top: 40px;
   }
 }
@@ -3107,12 +3110,12 @@ footer {
 }
 @media (max-width: 900px) {
   .context__about-description {
-    width: 90vw;
+    width: 85vw;
   }
 }
 @media (max-width: 800px) {
   .context__about-description {
-    width: 92vw;
+    width: 85vw;
   }
 }
 @media (max-width: 768px) {
@@ -3171,6 +3174,9 @@ footer {
 .context__about-text {
   max-width: 400px;
 }
+.context__about-list {
+  max-width: 500px;
+}
 .context__about-list h4 {
   max-width: 500px;
   margin-bottom: 30px;
@@ -3203,6 +3209,7 @@ footer {
   }
 }
 .context__about-list ul {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3211,22 +3218,31 @@ footer {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 16px;
+  position: relative;
+  margin-left: 25px;
 }
 .context__about-list ul li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  line-height: 20px;
+}
+@media (max-width: 1040px) {
+  .context__about-list ul li {
+    line-height: normal;
+  }
+}
+.context__about-list ul li span {
+  font-weight: 500;
 }
 .context__about-list ul li::before {
   content: "";
   display: inline-block;
-  position: relative;
+  position: absolute;
   background: url("../assets/svg/check-white.svg");
   background-size: contain;
   background-repeat: no-repeat;
   height: 18px;
   width: 18px;
-  margin-right: 5px;
+  left: -25px;
+  margin-top: 3px;
 }
 @media (max-width: 1240px) {
   .context__about-list ul {
@@ -3399,7 +3415,7 @@ footer {
 }
 .context__steps h2 {
   font-weight: 400;
-  line-height: normal;
+  line-height: 1.3em;
   letter-spacing: 1.4px;
   margin: 36px 0 20px;
   text-align: center;
@@ -3653,7 +3669,7 @@ footer {
 .context__additional h2 {
   color: #F5CB5C;
   font-weight: 350;
-  line-height: normal;
+  line-height: 1.3em;
   letter-spacing: 1.4px;
   margin-bottom: 20px;
   margin-top: 0px;
@@ -3990,30 +4006,29 @@ footer {
     width: 92vw;
   }
 }
-.seo__work h2 {
+.seo__work-title h2 {
   color: #F5CB5C;
   font-weight: 350;
-  line-height: normal;
+  line-height: 1.3em;
   letter-spacing: 1.4px;
-  margin-bottom: 20px;
-  margin-top: 0px;
+  margin-bottom: 70px;
   max-width: 660px;
   text-align: left;
 }
 @media (max-width: 1024px) {
-  .seo__work h2 {
+  .seo__work-title h2 {
     max-width: 500px;
   }
 }
 @media (max-width: 768px) {
-  .seo__work h2 {
-    margin-bottom: 10px;
+  .seo__work-title h2 {
+    margin-bottom: 50px;
   }
 }
 @media (max-width: 560px) {
-  .seo__work h2 {
+  .seo__work-title h2 {
     text-align: center;
-    margin-bottom: 0px;
+    margin-bottom: 50px;
   }
 }
 .seo__work-card {
@@ -4239,7 +4254,7 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 30px 80px 80px;
+  padding: 50px 80px 100px;
 }
 @media (max-width: 1440px) {
   .seo__additional {
@@ -4271,13 +4286,20 @@ footer {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  gap: 30px;
+  -webkit-column-gap: 30px;
+     -moz-column-gap: 30px;
+          column-gap: 30px;
+  row-gap: 50px;
 }
 @media (max-width: 668px) {
   .seo__additional-grid {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -webkit-column-gap: 20px;
+       -moz-column-gap: 20px;
+            column-gap: 20px;
+    row-gap: 40px;
   }
 }
 .seo__additional-card {
@@ -4348,6 +4370,10 @@ footer {
   text-transform: uppercase;
   letter-spacing: 0.48px;
   font-weight: 600;
+  line-height: 1.5em;
+}
+.seo__additional-text p {
+  line-height: 1.2em;
 }
 
 .email__additional-card {
