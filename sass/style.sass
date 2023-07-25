@@ -344,31 +344,45 @@ section
 .navigation__header.show
 	transform: translateX(0vw)
 	transition: all 0.6s ease
+#home__subheader
+	background: url("../assets/bg/bg1.png")
+	width: 100%
+	height: 772px
+	object-fit: cover
+	background-repeat: repeat-x
 .home__subheader
 	max-width: 1440px
 	position: relative
-	top: 40px
+	top: 4px
 	display: flex
+	flex-direction: row-reverse
 	justify-content: center
 	align-items: center
-	overflow-x: hidden
 	@media (max-width: 744px)
 		top: 0px
-	img
+	&-photo
 		position: relative
-		width: 100%
-		z-index: -1
-		object-fit: cover
+		width: 46%
+		left: -7vw
+		z-index: 2
+		object-fit: contain
+		bottom: -120px
 		@media (max-width: 744px)
 			width: 200%
+	// img
+	// 	position: relative
+	// 	width: 100%
+	// 	z-index: -1
+	// 	object-fit: cover
+	// 	@media (max-width: 744px)
+	// 		width: 200%
 	&-content
-		position: absolute
+		margin: 0 auto
+		position: relative
 		display: flex
 		flex-direction: column
 		justify-content: center
-		left: 0px
 		padding: 0 60px
-		top: 80px
 		gap: 30px
 		@media (max-width: 1440px)
 			padding: 0 60px
