@@ -1,6 +1,6 @@
 @font-face {
-  font-family: BauhausItalic;
-  src: url(../assets/fonts/BauhausItalic.ttf);
+  font-family: Pangolin-Regular;
+  src: url(../assets/fonts/Pangolin-Regular.ttf);
 }
 * {
   -webkit-box-sizing: border-box;
@@ -34,42 +34,55 @@ input:autofill, input:autofill:focus, input:autofill:hover {
 }
 
 h1 {
-  font-family: "Bauhaus";
-  font-size: 36px;
-  letter-spacing: 0.05em;
+  font-family: "Pangolin-Regular";
+  font-size: 28px;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
+  line-height: 1.5em;
+  background: rgba(36, 36, 35, 0.3);
+  border-radius: 50px;
+  padding: 0px;
 }
 @media (max-width: 1240px) {
   h1 {
-    font-size: 32px;
+    font-size: 24px;
   }
 }
 @media (max-width: 1040px) {
   h1 {
-    font-size: 30px;
-  }
-}
-@media (max-width: 904px) {
-  h1 {
-    font-size: 26px;
-    margin: 0 auto;
-    text-align: center;
+    font-size: 20px;
+    max-width: 300px;
   }
 }
 @media (max-width: 768px) {
   h1 {
     font-size: 24px;
+    letter-spacing: 0.08em;
+  }
+}
+@media (max-width: 600px) {
+  h1 {
+    font-size: 20px;
+    max-width: 51vw;
+    background: rgba(36, 36, 35, 0.5);
+    border-radius: 20px;
+    letter-spacing: 0.06em;
   }
 }
 @media (max-width: 450px) {
   h1 {
-    font-size: 20px;
+    font-size: 18px;
+    letter-spacing: 0.08em;
   }
+}
+h1 span {
+  font-size: 20px;
+  color: #F37935;
 }
 
 h2 {
   display: block;
-  font-family: "Bauhaus";
+  font-family: "Pangolin-Regular";
   font-size: 30px;
   letter-spacing: 0.09em;
   text-align: left;
@@ -106,54 +119,70 @@ h2 {
 
 h3 {
   color: #D8D3CF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
-  line-height: 33px;
+  line-height: 1.6em;
   letter-spacing: 0.05em;
-  background-color: #242423;
+  background: url("../assets/svg/dialog.svg");
   position: relative;
-  max-width: 580px;
+  max-width: 633px;
+  height: 240px;
+  padding: 50px;
+  padding-top: 10px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+@media (max-width: 1340px) {
+  h3 {
+    max-width: 600px;
+    height: 230px;
+    font-size: 22px;
+    padding: 40px;
+    padding-top: 0px;
+  }
 }
 @media (max-width: 1240px) {
   h3 {
-    font-size: 20px;
-    max-width: 440px;
+    font-size: 18px;
+    max-width: 450px;
+    padding: 40px;
+    padding-top: 0px;
+    height: 200px;
   }
 }
 @media (max-width: 1024px) {
   h3 {
-    font-size: 18px;
+    font-size: 12px;
     max-width: 340px;
+    height: 150px;
   }
 }
 @media (max-width: 744px) {
   h3 {
-    font-size: 18px;
-    max-width: 60%;
-    line-height: 23px;
-  }
-}
-@media (max-width: 450px) {
-  h3 {
-    font-size: 16px;
-    max-width: 52%;
-  }
-}
-@media (max-width: 390px) {
-  h3 {
     font-size: 15px;
+    max-width: 49vw;
+    height: 32vw;
+    background: url("../assets/svg/dialog-small.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    line-height: 1.4em;
   }
 }
-@media (max-width: 375px) {
+@media (max-width: 560px) {
   h3 {
-    background-color: rgba(36, 36, 35, 0.6);
-    font-size: 14px;
-    letter-spacing: 0;
-    line-height: 20px;
-    margin-top: 25px;
+    display: none;
   }
+}
+h3 br {
+  display: none;
 }
 
 h4 {
@@ -245,7 +274,7 @@ section {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-family: "Bauhaus";
+  font-family: "Pangolin-Regular";
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -603,8 +632,9 @@ section {
       -ms-flex-pack: center;
           justify-content: center;
   left: 0px;
-  padding: 0 80px;
-  gap: 50px;
+  padding: 0 60px;
+  top: 80px;
+  gap: 30px;
 }
 @media (max-width: 1440px) {
   .home__subheader-content {
@@ -614,18 +644,31 @@ section {
 @media (max-width: 1024px) {
   .home__subheader-content {
     padding: 0 40px;
-    gap: 35px;
+    gap: 10px;
+    top: 40px;
+  }
+}
+@media (max-width: 800px) {
+  .home__subheader-content {
+    top: 1vw;
   }
 }
 @media (max-width: 744px) {
   .home__subheader-content {
     padding: 0 10px;
+    gap: 20px;
+    top: 24vw;
+  }
+}
+@media (max-width: 600px) {
+  .home__subheader-content {
+    top: 14vw;
+    gap: 8vw;
   }
 }
 @media (max-width: 530px) {
   .home__subheader-content {
     padding: 0 20px;
-    gap: 25px;
   }
 }
 @media (max-width: 390px) {
@@ -635,11 +678,13 @@ section {
 }
 @media (max-width: 345px) {
   .home__subheader-content {
-    gap: 15px;
+    padding: 0 10px;
+    gap: 2vw;
+    top: 25vw;
   }
 }
 .home__subheader-btns {
-  max-width: 460px;
+  max-width: 440px;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -650,6 +695,17 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: 40px;
+}
+@media (max-width: 1024px) {
+  .home__subheader-btns {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 450px) {
+  .home__subheader-btns {
+    margin-top: 10px;
+  }
 }
 
 .home__services {
@@ -1676,7 +1732,7 @@ section {
 .home__quiz-title {
   color: #F37935;
   font-size: 38px;
-  font-family: Bauhaus;
+  font-family: Pangolin-Regular;
   text-transform: uppercase;
 }
 @media (max-width: 1024px) {
