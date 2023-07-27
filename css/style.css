@@ -4753,9 +4753,9 @@ footer {
     -webkit-transform: scale(1.1);
         -ms-transform: scale(1.1);
             transform: scale(1.1);
-    -webkit-transition-duration: 0.2s;
-         -o-transition-duration: 0.2s;
-            transition-duration: 0.2s;
+    -webkit-transition-duration: 0.4s;
+         -o-transition-duration: 0.4s;
+            transition-duration: 0.4s;
   }
   .my__cases-card:hover p {
     display: block;
