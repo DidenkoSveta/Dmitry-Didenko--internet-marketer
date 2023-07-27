@@ -110,15 +110,9 @@ h3
 		max-width: 340px
 		height: 150px
 	@media (max-width: 744px)
-		font-size: 15px
-		max-width: 49vw
-		height: 32vw
-		background: url("../assets/svg/dialog-small.svg")
-		background-repeat: no-repeat
-		background-size: contain
-		line-height: 1.4em
-	@media (max-width: 560px)
 		display: none
+	@media (max-width: 530px)
+		max-width: 90vw
 	br
 		display: none
 h4
@@ -346,10 +340,22 @@ section
 	transition: all 0.6s ease
 #home__subheader
 	background: url("../assets/bg/bg1.png")
+	position: relative
 	width: 100%
 	height: 772px
 	object-fit: cover
 	background-repeat: repeat-x
+	margin-bottom: 0px
+	@media (max-width: 1220px)
+		height: 700px
+	@media (max-width: 1024px)
+		height: 572px
+	@media (max-width: 744px)
+		height: 450px
+	@media (max-width: 530px)
+		height: 450px
+	@media (max-width: 390px)
+		height: 350px
 .home__subheader
 	max-width: 1440px
 	position: relative
@@ -357,25 +363,43 @@ section
 	display: flex
 	flex-direction: row-reverse
 	justify-content: center
-	align-items: center
+	align-items: flex-end
+	padding: 0 80px
+	overflow-x: hidden
+	@media (max-width: 1440px)
+		padding: 0 60px
+	@media (max-width: 1024px)
+		max-width: 1024px
+		padding: 0 40px
 	@media (max-width: 744px)
-		top: 0px
+		max-width: 744px
+	@media (max-width: 430px)
+		max-width: 430px
+		padding: 0 20px
+	@media (max-width: 320px)
+		max-width: 320px
+		padding: 0 10px
 	&-photo
 		position: relative
 		width: 46%
 		left: -7vw
 		z-index: 2
 		object-fit: contain
-		bottom: -120px
+		bottom: 4px
+		@media (max-width: 1220px)
+			width: 48%
+		@media (max-width: 1024px)
+			width: 60%
+			left: 0vw
 		@media (max-width: 744px)
-			width: 200%
-	// img
-	// 	position: relative
-	// 	width: 100%
-	// 	z-index: -1
-	// 	object-fit: cover
-	// 	@media (max-width: 744px)
-	// 		width: 200%
+			position: relative
+			width: 60vw
+		@media (max-width: 530px)
+			width: 70vw
+			left: 5vw
+		@media (max-width: 390px)
+			width: 80vw
+			left: 6vw
 	&-content
 		margin: 0 auto
 		position: relative
@@ -383,6 +407,7 @@ section
 		flex-direction: column
 		justify-content: center
 		padding: 0 60px
+		margin-bottom: 120px
 		gap: 30px
 		@media (max-width: 1440px)
 			padding: 0 60px
@@ -390,23 +415,20 @@ section
 			padding: 0 40px
 			gap: 10px
 			top: 40px
-		@media (max-width: 800px)
-			top: 1vw
 		@media (max-width: 744px)
 			padding: 0 10px
 			gap: 20px
-			top: 24vw
+			top: 8vw
 		@media (max-width: 600px)
-			top: 14vw
 			gap: 8vw
 		@media (max-width: 530px)
 			padding: 0 20px
+			left: 9vw
+			gap: 10vw
+			margin-bottom: 80px
 		@media (max-width: 390px)
 			padding: 0 10px
-		@media (max-width: 345px)
-			padding: 0 10px
-			gap: 2vw
-			top: 25vw
+			left: 18vw
 	&-btns
 		max-width: 440px
 		position: relative
@@ -484,9 +506,6 @@ section
 			padding: 10px 20px
 			text-align: left
 			line-height: 18px
-		// @media (max-width: 559px)
-		// 	width: 37vw
-		// 	height: 160px
 		img
 			@media (max-width: 1139px)
 				width: 85%
@@ -494,32 +513,42 @@ section
 				width: 80%
 			@media (max-width: 649px)
 				width: 80px
+.home__services
 	&-card:hover
 		cursor: pointer
-		border-image: linear-gradient(238.23deg, #F5CB5C 6.01%, #EB5E28 98.62%)
-		border-image-slice: 1
-		img
-			display: none
-		div
-			display: none
-		p
-			display: block
-		a
-			color: $yellow
-			font-size: 15px
-			display: flex
-			align-items: center
-			span
-				font-size: 20px
-				padding: 0 4px
+	@media (min-width: 650px)
+		&-card:hover
+			cursor: pointer
+			border-image: linear-gradient(238.23deg, #F5CB5C 6.01%, #EB5E28 98.62%)
+			border-image-slice: 1
+			img
+				display: none
+			div
+				display: none
+			ul
+				display: flex
+				flex-direction: column
+				gap: 12px
+				span
+					font-size: 20px
+					padding: 0 4px
 	&-back
 		display: none
 		text-align: left
-		font-size: 13px
+		font-size: 14px
+		color: $bege
 		@media (max-width: 1139px)
 			font-size: 12px
-		a:hover
-			color: $orange
+			line-height: normal
+		@media (max-width: 650px)
+			display: none
+.more
+	color: $yellow
+	font-size: 15px
+	display: flex
+	align-items: center
+.more:hover
+	color: $orange
 .background-bokes
 	position: relative
 	overflow: hidden
@@ -1622,6 +1651,7 @@ footer
 		align-items: center
 		width: 100vw
 		background: $gray
+		border-radius: 0px
 		height: 170px
 		margin: 0
 		margin-bottom: 80px
@@ -2290,3 +2320,49 @@ footer
 	background: #242423
 .email__about-list
 	max-width: 500px
+.page__services
+	&-name
+		margin-top: 90px
+		width: 100vw
+		background: $gray
+		height: 170px
+		display: flex
+		justify-content: center
+		align-content: center
+		@media (max-width: 1440px)
+			height: 140px
+		@media (max-width: 1240px)
+			height: 120px
+		@media (max-width: 1040px)
+			height: 100px
+		@media (max-width: 744px)
+			margin-top: 70px
+		@media (max-width: 430px)
+			margin-top: 55px
+		h1
+			display: flex
+			justify-content: center
+			align-content: center
+			border-radius: 0px
+			display: flex
+			justify-content: center
+			align-items: center
+			background: none
+			margin: 0
+			text-transform: uppercase
+			letter-spacing: 0.6
+			@media (max-width: 1240px)
+				font-size: 28px
+			@media (max-width: 1040px)
+				font-size: 24px
+			@media (max-width: 768px)
+				font-size: 20px
+		&-back 
+			@media (max-width: 649px)
+				display: flex
+#background-bokes
+	padding: 150px 0 110px
+	@media (max-width: 1040px)
+		padding: 100px 0 80px
+	@media (max-width: 649px)
+		padding: 60px 0 40px
