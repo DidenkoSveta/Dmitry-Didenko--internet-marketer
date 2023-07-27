@@ -4648,4 +4648,119 @@ footer {
   #background-bokes {
     padding: 60px 0 40px;
   }
+}
+
+.my__cases-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  row-gap: 60px;
+  -webkit-column-gap: 20px;
+     -moz-column-gap: 20px;
+          column-gap: 20px;
+}
+@media (max-width: 1240px) {
+  .my__cases-grid {
+    row-gap: 2vw;
+  }
+}
+@media (max-width: 768px) {
+  .my__cases-grid {
+    row-gap: 5vw;
+  }
+}
+@media (max-width: 425px) {
+  .my__cases-grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    row-gap: 8vw;
+  }
+}
+.my__cases-grid a {
+  display: block;
+}
+.my__cases-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  border-radius: 10px;
+  width: 360px;
+  overflow: hidden;
+}
+@media (max-width: 1240px) {
+  .my__cases-card {
+    width: 28vw;
+  }
+}
+@media (max-width: 930px) {
+  .my__cases-card {
+    width: 43vw;
+  }
+}
+@media (max-width: 768px) {
+  .my__cases-card {
+    width: 40vw;
+  }
+}
+@media (max-width: 425px) {
+  .my__cases-card {
+    width: 280px;
+  }
+}
+.my__cases-card p {
+  display: none;
+  z-index: 3;
+  position: absolute;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 1px;
+}
+.my__cases-card img {
+  z-index: 1;
+  width: 100%;
+}
+.my__cases-card div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #242423;
+  padding: 0;
+  margin: 0;
+  z-index: 2;
+  opacity: 0;
+}
+
+@media (min-width: 768px) {
+  .my__cases-card:hover img {
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1);
+    -webkit-transition-duration: 0.2s;
+         -o-transition-duration: 0.2s;
+            transition-duration: 0.2s;
+  }
+  .my__cases-card:hover p {
+    display: block;
+  }
+  .my__cases-card:hover div {
+    opacity: 0.4;
+  }
 }/*# sourceMappingURL=style.css.map */
