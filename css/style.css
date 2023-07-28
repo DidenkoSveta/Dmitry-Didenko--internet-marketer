@@ -4763,4 +4763,41 @@ footer {
   .my__cases-card:hover div {
     opacity: 0.4;
   }
+}
+
+.cursor-dot,
+.cursor-dot-outline {
+  z-index: 50;
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  opacity: 0;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+@media (max-width: 768px) {
+  .cursor-dot,
+  .cursor-dot-outline {
+    display: none;
+  }
+}
+
+.cursor-dot {
+  width: 10px;
+  height: 10px;
+  background-color: #F37935;
+}
+
+.cursor-dot-outline {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(243, 121, 53, 0.2);
 }/*# sourceMappingURL=style.css.map */

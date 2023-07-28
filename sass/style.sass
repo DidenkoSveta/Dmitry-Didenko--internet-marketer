@@ -2357,7 +2357,7 @@ footer
 				font-size: 24px
 			@media (max-width: 768px)
 				font-size: 20px
-		&-back 
+		&-back
 			@media (max-width: 649px)
 				display: flex
 #background-bokes
@@ -2375,9 +2375,9 @@ footer
 		column-gap: 20px
 		@media (max-width: 1240px)
 			row-gap: 2vw
-		@media (max-width: 768px)	
+		@media (max-width: 768px)
 			row-gap: 5vw
-		@media (max-width: 425px)	
+		@media (max-width: 425px)
 			display: flex
 			justify-content: center
 			row-gap: 8vw
@@ -2393,11 +2393,11 @@ footer
 		overflow: hidden
 		@media (max-width: 1240px)
 			width: 28vw
-		@media (max-width: 930px)	
+		@media (max-width: 930px)
 			width: 43vw
-		@media (max-width: 768px)	
+		@media (max-width: 768px)
 			width: 40vw
-		@media (max-width: 425px)	
+		@media (max-width: 425px)
 			width: 280px
 		p
 			display: none
@@ -2421,7 +2421,7 @@ footer
 			z-index: 2
 			opacity: 0
 .my__cases
-	@media (min-width: 768px)	
+	@media (min-width: 768px)
 		&-card:hover
 			img
 				transform: scale(1.1)
@@ -2430,3 +2430,31 @@ footer
 				display: block
 			div
 				opacity: 0.4
+
+// html,
+// body
+// 	cursor: none
+
+.cursor-dot,
+.cursor-dot-outline
+	z-index: 50
+	pointer-events: none
+	position: absolute
+	top: 50%
+	left: 50%
+	border-radius: 50%
+	opacity: 0
+	transform: translate(-50%, -50%)
+	transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out
+	@media (max-width: 768px)
+		display: none
+
+.cursor-dot
+	width: 10px
+	height: 10px
+	background-color: $orange
+
+.cursor-dot-outline
+	width: 50px
+	height: 50px
+	background-color: rgba(243, 121, 53, 0.2)

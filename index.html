@@ -17,6 +17,8 @@
 </head>
 
 <body>
+   <div class="cursor-dot-outline"></div>
+   <div class="cursor-dot"></div>
    <header>
       <div class="header__block">
          <a class="header__block-logo" href="index.html"><img src="assets/icon/logo.png" alt="logo"></a>
@@ -24,8 +26,8 @@
          <nav class="navigation__header">
             <button type="button" class="close header__close"></button>
             <ul class="header__block-lists navigation__menu">
-               <li class="header__block-link"><a class="header__block-list" href="index.html">Главная</a></li>
-               <li class="header__block-taplink"><a class="header__block-list" href="services.html">Услуги</a>
+               <li class="header__block-link"><a class="header__block-list" class="link" href="index.html">Главная</a></li>
+               <li class="header__block-taplink"><a class="header__block-list" class="link" href="services.html">Услуги</a>
                   <ul class="header__block-underlists">
                      <li class="header__block-underlist"><a href="context.html">Контекстная реклама</a></li>
                      <li class="header__block-underlist"><a href="seo.html">SEO-продвижение</a></li>
@@ -38,9 +40,9 @@
                      <li class="header__block-underlist"><a href="email.html">Email маркетинг</a></li>
                   </ul>
                </li>
-               <li><a class="header__block-list" href="cases.html">Кейсы</a></li>
-               <li><a class="header__block-list" href="faq.html">FAQ</a></li>
-               <li><a class="header__block-list" href="contacts.html">Контакты</a></li>
+               <li><a class="header__block-list" class="link" href="cases.html">Кейсы</a></li>
+               <li><a class="header__block-list" class="link" href="faq.html">FAQ</a></li>
+               <li><a class="header__block-list" class="link" href="contacts.html">Контакты</a></li>
             </ul>
          </nav>
          <a href="#" class="header__block-button link-btn">Обсудить проект</a>
@@ -51,7 +53,7 @@
          <!-- <img class="home__subheader-photo" src="assets/bg/dmitrii-bg.png" alt="диденко дмитрий - интернет маркетолог"> -->
          <img class="home__subheader-photo" src="assets/bg/photo.png" alt="диденко дмитрий - интернет маркетолог">
          <div class="home__subheader-content">
-            <h1>Дмитрий Диденко - <br> маркетолог с опытом более 10 лет!</h1>
+            <h1>Дмитрий Диденко - <br> маркетолог с опытом более 8 лет!</h1>
             <h3> &#34;Я помогаю бизнесу и людям выйти на <br> новый уровень взаимодействия с <br> помощью инструментов
                маркетинга&#34;</h3>
             <div class="home__subheader-btns">
@@ -353,6 +355,7 @@
    </footer>
    <script src="js/burger.js"></script>
    <script src="js/scroll.js"></script>
+   <script src="js/cursor.js"></script>
 </body>
 
 </html>
