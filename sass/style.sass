@@ -75,6 +75,15 @@ h2
 	@media (max-width: 390px)
 		margin: 20px 0px
 		line-height: 28px
+h2.element-show
+	animation: wipe-enter 1s
+@keyframes wipe-enter
+	0%
+		opacity: 0
+		transform: translateX(-200px)
+	100%
+		opacity: 1
+		transform: translateX(0px)
 h3
 	color: $bege
 	display: flex
@@ -115,6 +124,15 @@ h3
 		max-width: 90vw
 	br
 		display: none
+h3.element-show
+	animation: wipe-enter03 1.4s
+@keyframes wipe-enter03
+	0%
+		opacity: 0
+		transform: skew(-30deg)
+	100%
+		opacity: 1
+		transform: skew(0deg)
 h4
 	font-size: 24px
 	font-family: Roboto
@@ -542,6 +560,24 @@ section
 			line-height: normal
 		@media (max-width: 650px)
 			display: none
+.home__services-card:nth-child(n+6).element-show
+	animation: wipe-enter31 1.6s
+@keyframes wipe-enter31
+	0%
+		opacity: 0
+		transform: translateY(200px)
+	100%
+		opacity: 1
+		transform: translateY(0px)
+.home__services-card:nth-child(-n+5).element-show
+	animation: wipe-enter32 1.6s
+@keyframes wipe-enter32
+	0%
+		opacity: 0
+		transform: translateY(-200px)
+	100%
+		opacity: 1
+		transform: translateY(0px)
 .more
 	color: $yellow
 	font-size: 15px
@@ -757,6 +793,33 @@ section
 			@media (max-width: 649px)
 				text-align: justify
 				width: 80vw
+h5.element-show
+	animation: wipe-enter05 2s
+@keyframes wipe-enter05
+	0%
+		opacity: 0
+		transform: translateX(-200px)
+	100%
+		opacity: 1
+		transform: translateX(0px)
+.home__about-text.element-show
+	animation: wipe-enter06 2s
+@keyframes wipe-enter06
+	0%
+		opacity: 0
+		transform: translateY(-50px)
+	100%
+		opacity: 1
+		transform: translateX(0px)
+.about-img.element-show
+	animation: wipe-enter07 2s
+@keyframes wipe-enter07
+	0%
+		opacity: 0
+		transform: translateY(50px)
+	100%
+		opacity: 1
+		transform: translateX(0px)
 .about-rocket
 	position: relative
 	top: -60px
@@ -1057,6 +1120,36 @@ section
 				width: 76px
 		@media (max-width: 390px)
 			width: 90vw
+
+.home__privilege-card:nth-child(3n).element-show
+	animation: wipe-enter08 1.4s
+@keyframes wipe-enter08
+	0%
+		opacity: 0
+		transform: translateX(200px)
+	100%
+		opacity: 1
+		transform: translateX(0px)
+
+.home__privilege-card:nth-child(3n+2).element-show
+	animation: wipe-enter09 1.4s
+@keyframes wipe-enter09
+	0%
+		opacity: 0
+		transform: translateY(-100px)
+	100%
+		opacity: 1
+		transform: translateY(0px)
+
+.home__privilege-card:nth-child(3n+1).element-show
+	animation: wipe-enter10 1.4s
+@keyframes wipe-enter10
+	0%
+		opacity: 0
+		transform: translateX(-200px)
+	100%
+		opacity: 1
+		transform: translateX(0px)
 .contact__form
 	display: flex
 	flex-direction: column
@@ -2430,11 +2523,6 @@ footer
 				display: block
 			div
 				opacity: 0.4
-
-// html,
-// body
-// 	cursor: none
-
 .cursor-dot,
 .cursor-dot-outline
 	z-index: 50
@@ -2458,3 +2546,123 @@ footer
 	width: 50px
 	height: 50px
 	background-color: rgba(243, 121, 53, 0.2)
+
+.home__quiz.element-show
+	animation: wipe-enter07 2s
+@keyframes wipe-enter07
+	0%
+		opacity: 0
+		transform: translateY(50px)
+	100%
+		opacity: 1
+		transform: translateX(0px)
+
+.context__about-img.element-show
+	animation: wipe-enter20 1.6s
+@keyframes wipe-enter20
+	0%
+		opacity: 0
+		transform: translateX(-200px)
+	100%
+		opacity: 1
+		transform: translateX(0px)
+
+.context__about-list.element-show
+	animation: wipe-enter21 1.6s
+@keyframes wipe-enter21
+	0%
+		opacity: 0
+		transform: translateX(200px)
+	100%
+		opacity: 1
+		transform: translateX(0px)
+
+.context__steps-card:nth-child(2n),.faq__block-card:nth-child(2n).element-show
+	animation: wipe-enter22 1.6s
+@keyframes wipe-enter22
+	0%
+		opacity: 0
+		transform: translateX(200px)
+	100%
+		opacity: 1
+		transform: translateX(0px)
+
+.context__steps-card:nth-child(2n+1),.faq__block-card:nth-child(2n+1).element-show
+	animation: wipe-enter23 1.6s
+@keyframes wipe-enter23
+	0%
+		opacity: 0
+		transform: translateX(-200px)
+	100%
+		opacity: 1
+		transform: translateX(0px)
+
+.context__additional-card:nth-child(-n+3).element-show
+	animation: wipe-enter24 1.6s
+@keyframes wipe-enter24
+	0%
+		opacity: 0
+		transform: translateY(-200px)
+	100%
+		opacity: 1
+		transform: translateY(0px)
+
+.context__additional-card:nth-child(n+4).element-show
+	animation: wipe-enter25 1.6s
+@keyframes wipe-enter25
+	0%
+		opacity: 0
+		transform: translateY(200px)
+	100%
+		opacity: 1
+		transform: translateY(0px)
+
+.seo__additional-card:nth-child(-n+3).element-show
+	animation: wipe-enter26 1.6s
+@keyframes wipe-enter26
+	0%
+		opacity: 0
+		transform: translateX(-200px)
+	100%
+		opacity: 1
+		transform: translateX(0px)
+
+.seo__additional-card:nth-child(n+4).element-show
+	animation: wipe-enter27 1.6s
+@keyframes wipe-enter27
+	0%
+		opacity: 0
+		transform: translateX(200px)
+	100%
+		opacity: 1
+		transform: translateX(0px)
+
+.my__cases-grid a:nth-child(3n+2).element-show
+	animation: wipe-enter28 1.6s
+@keyframes wipe-enter28
+	0%
+		opacity: 0
+		transform: translateY(100px)
+	100%
+		opacity: 1
+		transform: translateY(0px)
+
+.my__cases-grid a:nth-child(3n).element-show
+	animation: wipe-enter29 1.6s
+@keyframes wipe-enter29
+	0%
+		opacity: 0
+		transform: translateX(200px)
+	100%
+		opacity: 1
+		transform: translateX(0px)
+
+.my__cases-grid a:nth-child(3n+1).element-show
+	animation: wipe-enter30 1.6s
+@keyframes wipe-enter30
+	0%
+		opacity: 0
+		transform: translateX(-200px)
+	100%
+		opacity: 1
+		transform: translateX(0px)
