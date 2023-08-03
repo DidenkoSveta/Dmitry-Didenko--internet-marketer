@@ -333,7 +333,7 @@ section {
   font-weight: 500;
   font-size: 18px;
   width: 184px;
-  height: 56px;
+  height: 52px;
   background: -o-linear-gradient(262.53deg, #F5CB5C 14.91%, #F37935 86%);
   background: linear-gradient(187.47deg, #F5CB5C 14.91%, #F37935 86%);
   -webkit-box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.25);
@@ -3269,6 +3269,9 @@ footer {
   .faq__block-text {
     font-size: 12px;
   }
+}
+.faq__block-text span {
+  color: #F5CB5C;
 }
 .faq__block-title {
   margin-bottom: 50px;

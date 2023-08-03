@@ -1,8 +1,8 @@
 const fs = require('fs');
 const uglifyJS = require('uglify-js');
 
-const inputFileName = 'js/main.js';
-const outputFileName = 'js/main.min.js';
+const inputFileName = '../js/main.js';
+const outputFileName = '../js/main.min.js';
 
 fs.readFile(inputFileName, 'utf8', (err, data) => {
   if (err) {
